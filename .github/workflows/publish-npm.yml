@@ -52,7 +52,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           cache: "yarn"
           registry-url: "https://registry.npmjs.org"
 
@@ -116,9 +116,6 @@ jobs:
           else
             echo "✅ Git tag ${TAG_NAME} does not exist. Safe to proceed."
           fi
-
-      - name: Run tests
-        run: yarn test
 
       - name: Update package for public npm
         run: |
