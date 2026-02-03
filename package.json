@@ -4,7 +4,8 @@
   "description": "Amazon S3 client for upload/download files",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+	"prepublishOnly": "node test/test2.js"
   },
   "repository": {
     "type": "git",
